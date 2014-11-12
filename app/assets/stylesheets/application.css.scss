@@ -1,0 +1,18 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-image: url('trianglify-background.svg');
+}
+
+.yield_center{
+  padding: 0% 30%;
+}
+
+.review_shape{
+  background-color: #E4EAEF;
+  border-radius: 10px;
+/*  border: 1px solid #ACACAC;*/
+  padding: 5px;
+  margin: 5px;
+}

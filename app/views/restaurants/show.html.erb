@@ -1,2 +1,24 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<h1 class="text-center">Restaurant : <%= @restaurant.name %><h1>
+
+<p >Address : <%= @restaurant.address %></p>
+<p >Phone number : <%= @restaurant.phone_number %></p>
+<p >Category : <%= @restaurant.category %></p>
+
+<h2>Reviews</h2>
+<% @restaurant.reviews.all.each do |review| %>
+  <div class="review_shape text-center">
+    <p>
+      <strong>Comment:</strong>
+      <%= review.content %>
+    </p>
+
+    <p>
+      <strong>Note :</strong>
+        <%= review.rating %>/5
+    </p>
+  </div>
+<% end %>
+
+<%= render 'reviews/form', restaurant: @restaurant, review: @review %>
+
+<p class="text-center"><%= link_to("Back to index", restaurants_path) %></p>

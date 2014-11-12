@@ -38,3 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#better errors
+gem 'binding_of_caller', group: :development
+gem 'better_errors', group: :development
+
+gem 'bootstrap-sass', '~> 3.3.0'

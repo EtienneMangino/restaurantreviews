@@ -1,0 +1,24 @@
+
+<div class="text-center">
+
+  <%= form_for([restaurant, review]) do |t| %>
+    <% if review.errors.any? %>
+      <div id="error_explanation">
+        <ul class="list-unstyled" >
+        <% review.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= t.label :content %>
+    <%= t.text_area :content %>
+    <br>
+    <%= t.label :rating %> ( /5)
+    <%= t.number_field  :rating %>
+    <br>
+    <%= t.submit %>
+  <% end %>
+</div>
+
